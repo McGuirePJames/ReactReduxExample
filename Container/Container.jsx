@@ -1,4 +1,4 @@
-﻿
+
 //user list
 function mapStateToProps(state) {
     return {
@@ -39,12 +39,9 @@ ReactDOM.render(
 //current user 
 function mapStateToPropsCurrentUser(state) {
     return {
-        delete: state,
-        //users: state.user.users,
         currentUser: state.user.currentUser,
         currentEmployee: state.employee.currentEmployee,
         employees: state.employee.employees,
-        test: state.user,
     }
 }
 function mapDispatchToPropsCurrentUser(dispatch) {
@@ -70,7 +67,6 @@ ReactDOM.render(
 //user role manager
 function mapStateToPropsCurrentUserRoles(state) {
     return {
-        delete: state,
         users: state.user.users,
         currentUser: store.getState().user.currentUser,
         availableRoles: state.role.availableRoles,
@@ -111,7 +107,6 @@ const CurrentUserRoles = ReactRedux.connect(
 //email address
 function mapStateToPropsCurrentEmailAddress(state) {
     return {
-        delete: state,
         currentUser: store.getState().user.currentUser,
         currentUserForEmailAddress: store.getState().user.currentUser,
         updateEmailAddressInputVisibility: state.user.updateEmailAddressInputVisibility,
